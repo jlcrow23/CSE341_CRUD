@@ -1,0 +1,28 @@
+{
+  "name": "cse341_crud",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlcrow23/CSE341_CRUD.git"
+  },
+  "author": "Julie Crowther",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jlcrow23/CSE341_CRUD/issues"
+  },
+  "homepage": "https://github.com/jlcrow23/CSE341_CRUD#readme",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.6.2",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.0"
+  }
+}
