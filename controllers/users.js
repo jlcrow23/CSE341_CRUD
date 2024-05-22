@@ -47,6 +47,7 @@ const updateUser = async (req, res) => {
         lastName: req.body.lastName,
         birthday: req.body.birthday,
         userName: req.body.userName,
+        password: req.body.password,
         email: req.body.email,
         preferedGenre: req.body.preferedGenre 
     };
