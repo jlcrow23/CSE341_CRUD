@@ -1,6 +1,6 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const mongodb = require('./db/database.js')
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongodb = require('./db/database.js');
 const app = express();
 
 const port = process.env.PORT || 3000;
@@ -15,6 +15,7 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     next();
 });
+
 app.use('/', require('./routes'))
 
 mongodb.initDb((err) => {
