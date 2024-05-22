@@ -13,7 +13,7 @@ const getAll = async (req, res) => {
 
 const getSingle = async (req, res) => {
     //#swagger.tags=['Books']
-    const bookId = new ObjectId(req.params.id);
+    const bookId = ObjectId.createFromTime(req.params.id);
     const result = await mongodb.getDatabase().db().collection('collection').find({_id: bookId});
     result.toArray().then((collection) => {
         res.setHeader('Content-Type', 'application/json');
@@ -43,7 +43,7 @@ const createBook = async (req, res) => {
 
 const updateBook = async (req, res) => {
     //#swagger.tags=['Books']
-    const bookId = new ObjectId(req.params.id);
+    const bookId = ObjectId.createFromTime(req.params.id);
     const book = {
         title: req.body.title,
         authorFirstName: req.body.authorFirstName,
@@ -64,7 +64,7 @@ const updateBook = async (req, res) => {
 
 const deleteBook = async (req, res) => {
     //#swagger.tags=['Books']
-    const bookId = new ObjectId(req.params.id);
+    const bookId = ObjectId.createFromTime(req.params.id);
     const response = await mongodb.getDatabase().db().collection('collection').deleteOne({ _id: bookId });
     if (response.deletedCount > 0) {
         res.status(204).send();
